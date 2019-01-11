@@ -1,10 +1,10 @@
 /*
  * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
  */
-package com.caisl.core.annotation;
+package com.caisl.ap.core.annotation;
 
 
-import com.caisl.core.domain.FunctionCodeEnum;
+import com.caisl.ap.core.domain.FunctionCodeEnum;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

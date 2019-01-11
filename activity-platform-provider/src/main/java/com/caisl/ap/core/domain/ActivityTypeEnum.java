@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
  */
-package com.caisl.core.domain;
+package com.caisl.ap.core.domain;
 
 /**
  * ActivityTypeEnum
