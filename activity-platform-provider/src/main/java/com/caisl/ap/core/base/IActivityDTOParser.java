@@ -17,8 +17,7 @@ public interface IActivityDTOParser<REQ extends ActivityRequest> {
      * 构建活动数据传输对象
      *
      * @param request
-     * @param <DTO>
      * @return
      */
-    <DTO extends ActivityDTO> DTO buildDTO(REQ request);
+    ActivityDTO buildDTO(REQ request);
 }
