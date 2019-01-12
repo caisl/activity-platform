@@ -1,6 +1,4 @@
-/*
- * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
- */
+
 package com.caisl.ap.core.domain;
 
 /**
@@ -10,7 +8,8 @@ package com.caisl.ap.core.domain;
  * @since 2019-01-10
  */
 public enum ActivityTypeEnum {
-    DEFAULT(-1,"","");
+    DEFAULT(-1, "", "");
+
     ActivityTypeEnum(int type, String memo, String name) {
         this.type = type;
         this.memo = memo;

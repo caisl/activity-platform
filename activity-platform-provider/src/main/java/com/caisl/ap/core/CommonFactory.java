@@ -1,9 +1,14 @@
-/*
- * Copyright (C) 2009-2017 Hangzhou 2Dfire Technology Co., Ltd.All rights reserved
- */
+
 package com.caisl.ap.core;
 
 
+import com.caisl.ap.core.annotation.ActivityTypeMapper;
+import com.caisl.ap.core.annotation.FunctionMapper;
+import com.caisl.ap.core.base.IActivityDTOParser;
+import com.caisl.ap.core.base.IActivityHandler;
+import com.caisl.ap.core.base.IActivityResponseParser;
+import com.caisl.ap.core.domain.ActivityTypeEnum;
+import com.caisl.ap.core.domain.FunctionCodeEnum;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -20,8 +25,16 @@ import java.util.Map;
  */
 @Component
 public class CommonFactory implements ApplicationContextAware {
+
     private Container container = new Container();
 
+    /**
+     * 获取活动处理器
+     *
+     * @param function
+     * @param activityType
+     * @return
+     */
     public IActivityHandler getActivityHandler(FunctionCodeEnum function, Integer activityType) {
         IActivityHandler functionHandler = (IActivityHandler) container.get(IActivityHandler.class, function, activityType);
         if (functionHandler == null) {
@@ -32,6 +45,13 @@ public class CommonFactory implements ApplicationContextAware {
         }
     }
 
+    /**
+     * 获取活动数据传输对象解析器
+     *
+     * @param function
+     * @param activityType
+     * @return
+     */
     public IActivityDTOParser getActivityDTOParser(FunctionCodeEnum function, Integer activityType) {
         IActivityDTOParser activityDTOParser = (IActivityDTOParser) container.get(IActivityDTOParser.class, function, activityType);
         if (activityDTOParser == null) {
@@ -42,7 +62,13 @@ public class CommonFactory implements ApplicationContextAware {
         }
     }
 
-
+    /**
+     * 获取活动响应对象解析器
+     *
+     * @param function
+     * @param activityType
+     * @return
+     */
     public IActivityResponseParser getActivityReponseParser(FunctionCodeEnum function, Integer activityType) {
         IActivityResponseParser activityResponseParser = (IActivityResponseParser) container.get(IActivityDTOParser.class, function, activityType);
         if (activityResponseParser == null) {
@@ -55,7 +81,7 @@ public class CommonFactory implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        Class[] types = new Class[] { IActivityHandler.class};
+        Class[] types = new Class[]{IActivityHandler.class};
         for (Class type : types) {
             Map map = applicationContext.getBeansOfType(type);
             for (Object bean : map.values()) {
@@ -75,20 +101,38 @@ public class CommonFactory implements ApplicationContextAware {
         }
     }
 
+    /**
+     * 获取ActivityTypeMapper注解内容
+     *
+     * @param obj
+     * @return
+     */
     private ActivityTypeEnum[] getActivityTypes(Object obj) {
-        ActivityTypeMapper sMap = obj.getClass().getAnnotation(ActivityTypeMapper.class);
-        if (sMap == null) {
+        ActivityTypeMapper activityMap = obj.getClass().getAnnotation(ActivityTypeMapper.class);
+        if (activityMap == null) {
             return null;
         }
-        return sMap.value();
+        return activityMap.value();
     }
 
+    /**
+     * 容器类
+     */
     private static class Container {
         private final Map<Class, Map<FunctionCodeEnum, Map<ActivityTypeEnum, Object>>> beanMap;
+
         public Container() {
             this.beanMap = new HashMap<>();
         }
 
+        /**
+         * 往容器中添加对象
+         *
+         * @param clazz
+         * @param function
+         * @param ActivityTypeEnums
+         * @param bean
+         */
         public void put(Class clazz, FunctionCodeEnum function, ActivityTypeEnum[] ActivityTypeEnums, Object bean) {
             Map<FunctionCodeEnum, Map<ActivityTypeEnum, Object>> functionMap = beanMap.get(clazz);
             if (functionMap == null) {
@@ -118,16 +162,6 @@ public class CommonFactory implements ApplicationContextAware {
                 }
             }
         }
-
-/*        public Object get(Class clazz, FunctionCodeEnum function) {
-            Map<ActivityTypeEnum, Object> activityMap = getActivityMap(clazz, function);
-            Object bean = activityMap.get(ActivityTypeEnum.DEFAULT);
-            if (bean == null) {
-                String err = function + " " + clazz.getSimpleName() + " mismatch";
-                throw new IllegalArgumentException(err);
-            }
-            return bean;
-        }*/
 
         public Object get(Class clazz, FunctionCodeEnum function, Integer activityType) {
             Map<ActivityTypeEnum, Object> activityMap = getActivityMap(clazz, function);
