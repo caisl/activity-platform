@@ -69,7 +69,7 @@ public class CommonFactory implements ApplicationContextAware {
      * @param activityType
      * @return
      */
-    public IActivityResponseParser getActivityReponseParser(FunctionCodeEnum function, Integer activityType) {
+    public IActivityResponseParser getActivityResponseParser(FunctionCodeEnum function, Integer activityType) {
         IActivityResponseParser activityResponseParser = (IActivityResponseParser) container.get(IActivityDTOParser.class, function, activityType);
         if (activityResponseParser == null) {
             String err = "functionCode :" + function + " - activityResponseParser mismatch";
@@ -81,7 +81,7 @@ public class CommonFactory implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        Class[] types = new Class[]{IActivityHandler.class};
+        Class[] types = new Class[]{IActivityHandler.class, IActivityDTOParser.class, IActivityResponseParser.class};
         for (Class type : types) {
             Map map = applicationContext.getBeansOfType(type);
             for (Object bean : map.values()) {

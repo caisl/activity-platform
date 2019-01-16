@@ -1,4 +1,3 @@
-
 package com.caisl.ap.core.base;
 
 import com.caisl.ap.activity.response.base.ActivityResponse;
@@ -16,8 +15,7 @@ public interface IActivityResponseParser {
      * 构造响应对象
      *
      * @param contextParam
-     * @param <RSP>
      * @return
      */
-    <RSP extends ActivityResponse> RSP buildResponse(ContextParam contextParam);
+    ActivityResponse buildResponse(ContextParam contextParam);
 }

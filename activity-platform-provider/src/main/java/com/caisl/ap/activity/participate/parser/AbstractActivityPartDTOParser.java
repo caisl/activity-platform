@@ -7,6 +7,7 @@ import com.caisl.ap.core.ActivityConfigDO;
 import com.caisl.ap.core.base.IActivityDTOParser;
 import com.caisl.ap.core.domain.ActivityDTO;
 import com.caisl.ap.rule.Rule;
+import com.caisl.ap.system.exception.BusinessRuntimeException;
 
 import java.util.List;
 
@@ -46,6 +47,11 @@ public abstract class AbstractActivityPartDTOParser<REQ extends BaseActivityPart
 
     @Override
     public BaseActivityPartDTO buildDTO(REQ request) {
-        return null;
+        ActivityConfigDO activityConfigDO = queryDB(request);
+        if (activityConfigDO == null) {
+            throw new BusinessRuntimeException("", "");
+        }
+        List<Rule> rules = buildRules(activityConfigDO);
+        return assembleDTO(activityConfigDO, rules);
     }
 }

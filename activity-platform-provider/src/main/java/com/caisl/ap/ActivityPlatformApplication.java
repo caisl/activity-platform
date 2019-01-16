@@ -3,7 +3,7 @@ package com.caisl.ap;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.caisl.ap"})
 public class ActivityPlatformApplication {
 
     public static void main(String[] args) {

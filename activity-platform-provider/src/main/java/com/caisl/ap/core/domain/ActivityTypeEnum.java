@@ -8,12 +8,12 @@ package com.caisl.ap.core.domain;
  * @since 2019-01-10
  */
 public enum ActivityTypeEnum {
-    DEFAULT(-1, "", "");
+    DEFAULT(-1, ""),
+    NEW_CUSTOMER_GIFT(1, "新人有礼");
 
-    ActivityTypeEnum(int type, String memo, String name) {
+    ActivityTypeEnum(int type, String memo) {
         this.type = type;
         this.memo = memo;
-        this.name = name;
     }
 
     public static ActivityTypeEnum getByType(Integer type) {
@@ -32,8 +32,6 @@ public enum ActivityTypeEnum {
 
     private String memo;
 
-    private String name;
-
     public int getType() {
         return type;
     }
@@ -48,14 +46,6 @@ public enum ActivityTypeEnum {
 
     public void setMemo(String memo) {
         this.memo = memo;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 }
