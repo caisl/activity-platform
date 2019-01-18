@@ -27,12 +27,14 @@
 供职于杭州某互联网创业公司，喜欢总结业务技术架构，提供业务解决技术方案
 
 ## 架构图
-![](/document/image/活动平台组件化.png)
+![活动平台组件化](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/image/%E6%B4%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0%E7%BB%84%E4%BB%B6%E5%8C%96.png)
 
 ## 核心UML图
-![](/document/image/活动平台UML.png)
+![](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/image/活动平台UML.png)
 
 ## 传送门
+[01业务功能设计](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/01%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1.md)
+
 
 
 
