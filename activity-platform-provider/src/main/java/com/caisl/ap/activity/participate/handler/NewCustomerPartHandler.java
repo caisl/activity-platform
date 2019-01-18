@@ -24,6 +24,6 @@ public class NewCustomerPartHandler extends AbstractActivityPartHandler {
 
     @Override
     protected void doAction(ContextParam contextParam) {
-        System.out.println("do Action");
+        System.out.println("do doAction");
     }
 }
