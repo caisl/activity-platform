@@ -12,7 +12,7 @@ import com.caisl.ap.core.base.IActivityDTOParser;
 import com.caisl.ap.core.base.IActivityHandler;
 import com.caisl.ap.core.base.IActivityResponseParser;
 import com.caisl.ap.core.domain.ContextParam;
-import com.caisl.ap.rule.Rule;
+import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.system.exception.BusinessRuntimeException;
 import org.springframework.util.CollectionUtils;
 

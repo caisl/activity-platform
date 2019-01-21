@@ -1,7 +1,7 @@
 package com.caisl.ap.activity.participate.domain;
 
 import com.caisl.ap.core.domain.ActivityDTO;
-import com.caisl.ap.rule.Rule;
+import com.caisl.ap.rule.base.Rule;
 
 import java.util.List;
 

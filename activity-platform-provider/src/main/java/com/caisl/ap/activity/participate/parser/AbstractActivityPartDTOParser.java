@@ -5,8 +5,7 @@ import com.caisl.ap.activity.participate.domain.BaseActivityPartDTO;
 import com.caisl.ap.activity.request.base.BaseActivityPartRequest;
 import com.caisl.ap.core.ActivityConfigDO;
 import com.caisl.ap.core.base.IActivityDTOParser;
-import com.caisl.ap.core.domain.ActivityDTO;
-import com.caisl.ap.rule.Rule;
+import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.system.exception.BusinessRuntimeException;
 
 import java.util.List;

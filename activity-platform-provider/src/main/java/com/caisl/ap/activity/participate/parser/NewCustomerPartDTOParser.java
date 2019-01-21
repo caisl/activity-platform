@@ -12,7 +12,7 @@ import com.caisl.ap.core.base.IActivityResponseParser;
 import com.caisl.ap.core.domain.ActivityTypeEnum;
 import com.caisl.ap.core.domain.ContextParam;
 import com.caisl.ap.core.domain.FunctionCodeEnum;
-import com.caisl.ap.rule.Rule;
+import com.caisl.ap.rule.base.Rule;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
