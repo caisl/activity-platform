@@ -1,5 +1,6 @@
 package com.caisl.ap.rule.base;
 
+import com.caisl.ap.activity.domain.Result;
 import com.caisl.ap.rule.domain.request.RuleCheckRequest;
 
 /**
@@ -8,13 +9,13 @@ import com.caisl.ap.rule.domain.request.RuleCheckRequest;
  * @author shinan
  * @since 2019-01-21
  */
-public interface RuleChecker<T extends Rule, Request extends RuleCheckRequest> extends Checker<T> {
+public interface RuleChecker<T extends Rule, REQ extends RuleCheckRequest> extends Checker<T> {
     /**
      * 规则检验
      *
-     * @param Rule
+     * @param rule
      * @param request
      * @return
      */
-    void validate(T Rule, Request request);
+    Result validate(T rule, REQ request);
 }

@@ -1,5 +1,7 @@
 package com.caisl.ap.rule.base;
 
+import com.caisl.ap.activity.domain.Result;
+
 /**
  * Checker
  *
@@ -13,5 +15,5 @@ public interface Checker<T> {
      * @param rule
      * @return
      */
-    void check(T rule);
+    Result check(T rule);
 }
