@@ -2,6 +2,8 @@ package com.caisl.ap.activity.participate.domain;
 
 import com.caisl.ap.core.domain.ActivityDTO;
 import com.caisl.ap.rule.base.Rule;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.List;
 
@@ -23,5 +25,11 @@ public abstract class BaseActivityPartDTO implements ActivityDTO {
 
     public void setRules(List<Rule> rules) {
         this.rules = rules;
+    }
+
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
     }
 }

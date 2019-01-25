@@ -39,6 +39,7 @@
 
 [03规则引擎设计](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/03规则引擎设计.md)
 
+[05执行效果](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/05执行效果.md)
 
 
 
