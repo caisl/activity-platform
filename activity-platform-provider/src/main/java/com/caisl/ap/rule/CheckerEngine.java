@@ -126,6 +126,12 @@ public abstract class CheckerEngine<T extends Rule, C extends Checker> {
             }
         }
 
+        /**
+         * 检查code是否重复
+         *
+         * @param checkList
+         * @return
+         */
         private Result checkCodeDuplicate(List<T> checkList) {
             if (checkList.get(0) instanceof Rule) {
                 Map ruleMap = new HashMap();
