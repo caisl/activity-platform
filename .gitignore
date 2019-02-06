@@ -1,0 +1,13 @@
+### IDEA template
+
+# IntelliJ project files
+.idea/
+*.iml
+# Eclipse project files
+*.classpath
+*.project
+.settings/
+# build files
+target/
+*.tar.gz
+disconf/
