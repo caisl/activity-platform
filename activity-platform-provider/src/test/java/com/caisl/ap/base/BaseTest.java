@@ -9,10 +9,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * BaseTest
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-12
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = ActivityPlatformApplication.class)
-public class BaseTest {
+public abstract class BaseTest {
 }

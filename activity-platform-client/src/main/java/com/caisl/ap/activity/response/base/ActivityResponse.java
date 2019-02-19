@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * ActivityResponse
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-11
  */
 public interface ActivityResponse extends Serializable {

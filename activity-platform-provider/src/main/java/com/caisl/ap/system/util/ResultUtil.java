@@ -1,11 +1,11 @@
 package com.caisl.ap.system.util;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 
 /**
  * ResultUtil
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 public class ResultUtil {

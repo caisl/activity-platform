@@ -4,7 +4,7 @@ package com.caisl.ap.system.exception;
 /**
  * BusinessRuntimeException
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-11
  */
 public class BusinessRuntimeException extends RuntimeException {

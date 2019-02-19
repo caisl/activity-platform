@@ -4,12 +4,13 @@ package com.caisl.ap.core.domain;
 /**
  * ActivityTypeEnum
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-10
  */
 public enum ActivityTypeEnum {
     DEFAULT(-1, ""),
-    NEW_CUSTOMER_GIFT(1, "新人有礼");
+    NEW_CUSTOMER_GIFT(1, "新人有礼"),
+    DIRECT_SEND_COUPON(2, "定向红包活动");
 
     ActivityTypeEnum(int type, String memo) {
         this.type = type;

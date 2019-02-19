@@ -5,7 +5,7 @@ import com.caisl.ap.rule.base.AbstractRule;
 /**
  * StartTimeRule
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 public class StartTimeRule extends AbstractRule<Long> {
@@ -29,11 +29,11 @@ public class StartTimeRule extends AbstractRule<Long> {
 
     @Override
     public int getSort() {
-        return 99;
+        return 21;
     }
 
     @Override
     public String getDisplay() {
-        return StartTimeRule.class.getSimpleName();
+        return "活动开始时间";
     }
 }

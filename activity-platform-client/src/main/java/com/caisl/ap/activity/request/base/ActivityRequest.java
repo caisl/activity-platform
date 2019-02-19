@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * ActivityRequest
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-11
  */
 public interface ActivityRequest extends Serializable {

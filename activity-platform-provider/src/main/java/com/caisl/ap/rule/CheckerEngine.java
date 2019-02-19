@@ -1,6 +1,6 @@
 package com.caisl.ap.rule;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.rule.base.Checker;
 import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.system.helper.BeanHelper;
@@ -15,7 +15,7 @@ import java.util.*;
 /**
  * CheckerEngine
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 public abstract class CheckerEngine<T extends Rule, C extends Checker> {

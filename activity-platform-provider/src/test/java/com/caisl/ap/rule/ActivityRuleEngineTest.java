@@ -1,12 +1,11 @@
 package com.caisl.ap.rule;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.base.BaseTest;
 import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.rule.domain.pojo.StartTimeRule;
 import com.caisl.ap.rule.domain.request.ActivityPartRuleRequest;
 import com.google.common.collect.Lists;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,7 +15,7 @@ import java.util.List;
 /**
  * ActivityRuleEngineTest
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 public class ActivityRuleEngineTest extends BaseTest{

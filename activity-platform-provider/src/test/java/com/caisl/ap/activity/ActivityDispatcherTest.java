@@ -14,16 +14,19 @@ import javax.annotation.Resource;
 /**
  * ActivityDispatcherTest
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-12
  */
 public class ActivityDispatcherTest extends BaseTest {
+
+    public static final String customerRegisterId = "caisl";
+    public static final String channelId= "WECHAT";
     @Resource
     ActivityDispatcher activityDispatcher;
 
     @Test
     public void dispatcherTest() {
-        NewCustomerPartRequest newCustomerPartRequest = new NewCustomerPartRequest();
+        NewCustomerPartRequest newCustomerPartRequest = new NewCustomerPartRequest(customerRegisterId, channelId);
         ContextParam contextParam = new ContextParam(FunctionCodeEnum.ACTIVITY_PARTICIPATE, newCustomerPartRequest,
                 ActivityTypeEnum.NEW_CUSTOMER_GIFT.getType());
         activityDispatcher.dispatcher(contextParam);

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * BeanHelper
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 @Component

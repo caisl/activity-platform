@@ -1,6 +1,6 @@
 package com.caisl.ap.provider;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.activity.request.NewCustomerPartRequest;
 import com.caisl.ap.activity.response.NewCustomerPartResponse;
 import com.caisl.ap.activity.service.IActivityPartService;
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 /**
  * ActivityPartService
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 @Service

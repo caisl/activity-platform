@@ -9,7 +9,7 @@ import com.caisl.ap.core.domain.ActivityDTO;
  * IActivityDTOParser
  * 活动数据传输对象解析器
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-10
  */
 public interface IActivityDTOParser<REQ extends ActivityRequest> {

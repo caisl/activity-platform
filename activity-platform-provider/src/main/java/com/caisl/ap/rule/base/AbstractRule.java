@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 /**
  * AbstractRule
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-21
  */
 public abstract class AbstractRule<T> implements Rule<T> {

@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * BaseActivityPartResponse
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-14
  */
 public abstract class BaseActivityPartResponse implements ActivityResponse {

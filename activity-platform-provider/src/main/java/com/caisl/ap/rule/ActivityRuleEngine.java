@@ -1,6 +1,6 @@
 package com.caisl.ap.rule;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.rule.base.RuleChecker;
 import com.caisl.ap.rule.domain.request.ActivityPartRuleRequest;
@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * ActivityRuleEngine
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 @Component

@@ -20,7 +20,7 @@ import java.util.Map;
 /**
  * CommonFactory
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-03
  */
 @Component
@@ -70,7 +70,7 @@ public class CommonFactory implements ApplicationContextAware {
      * @return
      */
     public IActivityResponseParser getActivityResponseParser(FunctionCodeEnum function, Integer activityType) {
-        IActivityResponseParser activityResponseParser = (IActivityResponseParser) container.get(IActivityDTOParser.class, function, activityType);
+        IActivityResponseParser activityResponseParser = (IActivityResponseParser) container.get(IActivityResponseParser.class, function, activityType);
         if (activityResponseParser == null) {
             String err = "functionCode :" + function + " - activityResponseParser mismatch";
             throw new IllegalArgumentException(err);

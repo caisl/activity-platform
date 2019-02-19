@@ -15,7 +15,6 @@
     <modules>
         <module>activity-platform-client</module>
         <module>activity-platform-provider</module>
-        <module>activity-platform-document</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -44,6 +43,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

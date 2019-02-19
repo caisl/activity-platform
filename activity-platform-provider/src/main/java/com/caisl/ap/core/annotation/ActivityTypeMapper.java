@@ -13,7 +13,7 @@ import static java.lang.annotation.ElementType.TYPE;
 /**
  * FunctionMapper
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-09
  */
 @Target(TYPE)

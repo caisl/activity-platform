@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * ActivityDTO
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-09
  */
 public interface ActivityDTO extends Serializable {

@@ -1,4 +1,3 @@
-
 package com.caisl.ap.core.domain;
 
 
@@ -9,19 +8,19 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * ContextParam
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-09
  */
-public class ContextParam {
+public class ContextParam<REQ extends ActivityRequest, DTO extends ActivityDTO> {
     private final FunctionCodeEnum functionCode;
 
     private Integer activityType;
 
-    private ActivityRequest request;
+    private REQ request;
 
-    private ActivityDTO activityDTO;
+    private DTO activityDTO;
 
-    public ContextParam(FunctionCodeEnum functionCode, ActivityRequest request, Integer activityType) {
+    public ContextParam(FunctionCodeEnum functionCode, REQ request, Integer activityType) {
         this.functionCode = functionCode;
         this.request = request;
         this.activityType = activityType;
@@ -39,25 +38,25 @@ public class ContextParam {
         this.activityType = activityType;
     }
 
-    public ActivityRequest getRequest() {
-        return request;
-    }
-
-    public void setRequest(ActivityRequest request) {
-        this.request = request;
-    }
-
-
-    public ActivityDTO getActivityDTO() {
-        return activityDTO;
-    }
-
-    public void setActivityDTO(ActivityDTO activityDTO) {
-        this.activityDTO = activityDTO;
-    }
 
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.SIMPLE_STYLE);
+    }
+
+    public REQ getRequest() {
+        return request;
+    }
+
+    public void setRequest(REQ request) {
+        this.request = request;
+    }
+
+    public DTO getActivityDTO() {
+        return activityDTO;
+    }
+
+    public void setActivityDTO(DTO activityDTO) {
+        this.activityDTO = activityDTO;
     }
 }

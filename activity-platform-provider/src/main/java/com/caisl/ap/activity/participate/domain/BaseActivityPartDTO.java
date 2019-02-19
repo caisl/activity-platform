@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * BaseActivityPartDTO
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-12
  */
 public abstract class BaseActivityPartDTO implements ActivityDTO {

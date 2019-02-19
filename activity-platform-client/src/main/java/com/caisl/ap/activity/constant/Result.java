@@ -1,9 +1,9 @@
-package com.caisl.ap.activity.domain;
+package com.caisl.ap.activity.constant;
 
 /**
  * Result
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-22
  */
 public class Result<T> {

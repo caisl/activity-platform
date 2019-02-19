@@ -4,11 +4,12 @@ package com.caisl.ap.core.domain;
 /**
  * FunctionCodeEnum
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-09
  */
 public enum FunctionCodeEnum {
-    ACTIVITY_PARTICIPATE("participate");
+    ACTIVITY_PARTICIPATE("participate"),
+    ACTIVITY_RELEASE("release");
 
     private String code;
 

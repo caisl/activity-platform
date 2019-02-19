@@ -1,11 +1,11 @@
 package com.caisl.ap.rule.base;
 
-import com.caisl.ap.activity.domain.Result;
+import com.caisl.ap.activity.constant.Result;
 
 /**
  * Checker
  *
- * @author shinan
+ * @author caisl
  * @since 2019-01-21
  */
 public interface Checker<T> {
