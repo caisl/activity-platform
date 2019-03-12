@@ -1,7 +1,7 @@
 package com.caisl.ap.rule;
 
 import com.caisl.ap.activity.constant.Result;
-import com.caisl.ap.base.BaseTest;
+import com.caisl.ap.BaseTest;
 import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.rule.domain.pojo.StartTimeRule;
 import com.caisl.ap.rule.domain.request.ActivityPartRuleRequest;

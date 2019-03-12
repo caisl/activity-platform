@@ -1,5 +1,5 @@
 
-package com.caisl.ap.base;
+package com.caisl.ap;
 
 import com.caisl.ap.ActivityPlatformApplication;
 import org.junit.runner.RunWith;

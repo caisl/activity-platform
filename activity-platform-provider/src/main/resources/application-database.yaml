@@ -1,0 +1,13 @@
+mybatis:
+  typeAliasesPackage: com.caisl.ap.common.dataobject
+  mapperLocations: classpath:mapper/*.xml
+
+
+spring:
+    datasource:
+        name: presell-market
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/activity_platform?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+        username: root
+        password: root
+

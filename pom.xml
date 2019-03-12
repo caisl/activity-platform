@@ -15,6 +15,7 @@
     <modules>
         <module>activity-platform-client</module>
         <module>activity-platform-provider</module>
+        <module>activity-platform-document</module>
     </modules>
 
     <packaging>pom</packaging>

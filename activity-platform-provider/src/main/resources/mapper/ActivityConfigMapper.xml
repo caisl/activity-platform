@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.caisl.ap.common.dao.mapper.ActivityConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.caisl.ap.common.dataobject.ActivityConfigDO" >
+    <id column="activity_config_id" property="activityConfigId" jdbcType="BIGINT" />
+    <result column="activity_title" property="activityTitle" jdbcType="VARCHAR" />
+    <result column="activity_type" property="activityType" jdbcType="TINYINT" />
+    <result column="creator" property="creator" jdbcType="VARCHAR" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+    <result column="env" property="env" jdbcType="VARCHAR" />
+    <result column="publisher" property="publisher" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="TINYINT" />
+    <result column="start_time" property="startTime" jdbcType="BIGINT" />
+    <result column="end_time" property="endTime" jdbcType="BIGINT" />
+    <result column="publish_time" property="publishTime" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="op_time" property="opTime" jdbcType="BIGINT" />
+    <result column="is_valid" property="isValid" jdbcType="TINYINT" />
+    <result column="last_ver" property="lastVer" jdbcType="INTEGER" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="extend_field" property="extendField" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    activity_config_id, activity_title, activity_type, creator, operator,
+    env, publisher, status, start_time, end_time, publish_time, create_time, op_time, 
+    is_valid, last_ver, description, remark, extend_field
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from activity_config
+    where activity_config_id = #{activityConfigId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from activity_config
+    where activity_config_id = #{activityConfigId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.caisl.ap.common.dataobject.ActivityConfigDO" >
+    insert into activity_config (activity_config_id, activity_title,
+      activity_type, creator, operator, 
+      env, publisher, status, 
+      start_time, end_time, publish_time, 
+      create_time, op_time, is_valid, 
+      last_ver, description, remark, 
+      extend_field)
+    values (#{activityConfigId,jdbcType=BIGINT}, #{activityTitle,jdbcType=VARCHAR},
+      #{activityType,jdbcType=TINYINT}, #{creator,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, 
+      #{env,jdbcType=VARCHAR}, #{publisher,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
+      #{startTime,jdbcType=BIGINT}, #{endTime,jdbcType=BIGINT}, #{publishTime,jdbcType=BIGINT}, 
+      #{createTime,jdbcType=BIGINT}, #{opTime,jdbcType=BIGINT}, #{isValid,jdbcType=TINYINT}, 
+      #{lastVer,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+      #{extendField,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.caisl.ap.common.dataobject.ActivityConfigDO" >
+    insert into activity_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="activityConfigId != null" >
+        activity_config_id,
+      </if>
+      <if test="activityTitle != null" >
+        activity_title,
+      </if>
+      <if test="activityType != null" >
+        activity_type,
+      </if>
+      <if test="creator != null" >
+        creator,
+      </if>
+      <if test="operator != null" >
+        operator,
+      </if>
+      <if test="env != null" >
+        env,
+      </if>
+      <if test="publisher != null" >
+        publisher,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="startTime != null" >
+        start_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="publishTime != null" >
+        publish_time,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="opTime != null" >
+        op_time,
+      </if>
+      <if test="isValid != null" >
+        is_valid,
+      </if>
+      <if test="lastVer != null" >
+        last_ver,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="extendField != null" >
+        extend_field,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="activityConfigId != null" >
+        #{activityConfigId,jdbcType=BIGINT},
+      </if>
+      <if test="activityTitle != null" >
+        #{activityTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="activityType != null" >
+        #{activityType,jdbcType=TINYINT},
+      </if>
+      <if test="creator != null" >
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="env != null" >
+        #{env,jdbcType=VARCHAR},
+      </if>
+      <if test="publisher != null" >
+        #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="startTime != null" >
+        #{startTime,jdbcType=BIGINT},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=BIGINT},
+      </if>
+      <if test="publishTime != null" >
+        #{publishTime,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="opTime != null" >
+        #{opTime,jdbcType=BIGINT},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=TINYINT},
+      </if>
+      <if test="lastVer != null" >
+        #{lastVer,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="extendField != null" >
+        #{extendField,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.caisl.ap.common.dataobject.ActivityConfigDO" >
+    update activity_config
+    <set >
+      <if test="activityTitle != null" >
+        activity_title = #{activityTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="activityType != null" >
+        activity_type = #{activityType,jdbcType=TINYINT},
+      </if>
+      <if test="creator != null" >
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="operator != null" >
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+      <if test="env != null" >
+        env = #{env,jdbcType=VARCHAR},
+      </if>
+      <if test="publisher != null" >
+        publisher = #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="startTime != null" >
+        start_time = #{startTime,jdbcType=BIGINT},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=BIGINT},
+      </if>
+      <if test="publishTime != null" >
+        publish_time = #{publishTime,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=BIGINT},
+      </if>
+      <if test="opTime != null" >
+        op_time = #{opTime,jdbcType=BIGINT},
+      </if>
+      <if test="isValid != null" >
+        is_valid = #{isValid,jdbcType=TINYINT},
+      </if>
+      <if test="lastVer != null" >
+        last_ver = #{lastVer,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="extendField != null" >
+        extend_field = #{extendField,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where activity_config_id = #{activityConfigId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.caisl.ap.common.dataobject.ActivityConfigDO" >
+    update activity_config
+    set activity_title = #{activityTitle,jdbcType=VARCHAR},
+      activity_type = #{activityType,jdbcType=TINYINT},
+      creator = #{creator,jdbcType=VARCHAR},
+      operator = #{operator,jdbcType=VARCHAR},
+      env = #{env,jdbcType=VARCHAR},
+      publisher = #{publisher,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      start_time = #{startTime,jdbcType=BIGINT},
+      end_time = #{endTime,jdbcType=BIGINT},
+      publish_time = #{publishTime,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=BIGINT},
+      op_time = #{opTime,jdbcType=BIGINT},
+      is_valid = #{isValid,jdbcType=TINYINT},
+      last_ver = #{lastVer,jdbcType=INTEGER},
+      description = #{description,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      extend_field = #{extendField,jdbcType=VARCHAR}
+    where activity_config_id = #{activityConfigId,jdbcType=BIGINT}
+  </update>
+</mapper>

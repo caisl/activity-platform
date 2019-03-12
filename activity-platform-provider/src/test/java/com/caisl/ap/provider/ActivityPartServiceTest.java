@@ -4,7 +4,7 @@ import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.activity.request.NewCustomerPartRequest;
 import com.caisl.ap.activity.response.NewCustomerPartResponse;
 import com.caisl.ap.activity.service.IActivityPartService;
-import com.caisl.ap.base.BaseTest;
+import com.caisl.ap.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 

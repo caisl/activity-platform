@@ -44,7 +44,7 @@ public class NewCustomerActivityParser extends AbstractActivityPartDTOParser<New
         LogUtil.log(ActivityLoggerFactory.BUSINESS, ActivityLoggerMarker.BUSINESS, Level.INFO, "do queryDB");
         //MOCK 模拟数据，跑通流程
         ActivityConfigDO activityConfigDO = new ActivityConfigDO();
-        activityConfigDO.setActivityStatus(PresellActivityStatusEnum.PROCESSING.getCode());
+        activityConfigDO.setStatus(PresellActivityStatusEnum.PROCESSING.getCode());
         activityConfigDO.setEndTime(System.currentTimeMillis() + 24*60*60*1000);
         activityConfigDO.setStartTime(System.currentTimeMillis() - 24*60*60*1000);
         return activityConfigDO;
@@ -56,7 +56,7 @@ public class NewCustomerActivityParser extends AbstractActivityPartDTOParser<New
         List<Rule> rules = Lists.newArrayList();
         rules.add(new StartTimeRule(activityConfigDO.getStartTime()));
         rules.add(new EndTimeRule(activityConfigDO.getEndTime()));
-        rules.add(new ActivityStatusRule(activityConfigDO.getActivityStatus()));
+        rules.add(new ActivityStatusRule(activityConfigDO.getStatus()));
         return rules;
     }
 

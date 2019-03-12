@@ -1,6 +1,6 @@
 package com.caisl.ap.common.dataobject;
 
-import java.io.Serializable;
+import lombok.Data;
 
 /**
  * ActivityConfigDO
@@ -10,41 +10,37 @@ import java.io.Serializable;
  * @author caisl
  * @since 2019-01-12
  */
-public class ActivityConfigDO implements Serializable {
+@Data
+public class ActivityConfigDO extends Base {
+    private static final long serialVersionUID = 17062730966705954L;
     /**
-     * 活动开始时间
+     * 主键
      */
+    private Long activityConfigId;
+
+    private String activityTitle;
+
+    private Byte activityType;
+
+    private String creator;
+
+    private String operator;
+
+    private String env;
+
+    private String publisher;
+
+    private Integer status;
+
     private Long startTime;
-    /**
-     * 活动结束时间
-     */
+
     private Long endTime;
-    /**
-     * 活动状态
-     */
-    private Integer activityStatus;
 
-    public Long getStartTime() {
-        return startTime;
-    }
+    private Long publishTime;
 
-    public void setStartTime(Long startTime) {
-        this.startTime = startTime;
-    }
+    private String description;
 
-    public Long getEndTime() {
-        return endTime;
-    }
+    private String remark;
 
-    public void setEndTime(Long endTime) {
-        this.endTime = endTime;
-    }
-
-    public Integer getActivityStatus() {
-        return activityStatus;
-    }
-
-    public void setActivityStatus(Integer activityStatus) {
-        this.activityStatus = activityStatus;
-    }
+    private String extendField;
 }

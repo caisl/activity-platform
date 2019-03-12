@@ -9,6 +9,10 @@
 
     <logger name="org.springframework" level="WARN" />
 
+    <logger name="com.caisl.ap.common.dao.mapper" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
     </root>

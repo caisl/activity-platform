@@ -2,7 +2,7 @@
 package com.caisl.ap.activity;
 
 import com.caisl.ap.activity.request.NewCustomerPartRequest;
-import com.caisl.ap.base.BaseTest;
+import com.caisl.ap.BaseTest;
 import com.caisl.ap.core.ActivityDispatcher;
 import com.caisl.ap.core.domain.ActivityTypeEnum;
 import com.caisl.ap.core.domain.ContextParam;
