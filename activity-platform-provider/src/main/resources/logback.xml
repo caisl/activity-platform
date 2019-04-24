@@ -2,7 +2,7 @@
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%date %level %5logger [%file:%line] %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %level [%t] %marker %msg%n</pattern>
             <charset>utf8</charset>
         </encoder>
     </appender>
