@@ -32,7 +32,7 @@
 
 
 ## 作者介绍
-供职于饭点儿科技有限公司，负责营销业务。喜欢总结业务技术架构，提供业务解决技术方案
+供职于杭州某创业公司，负责营销业务。喜欢总结业务技术架构，提供业务解决技术方案
 
 ## 架构图
 ![活动平台组件化](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/image/%E6%B4%BB%E5%8A%A8%E5%B9%B3%E5%8F%B0%E7%BB%84%E4%BB%B6%E5%8C%96.png)
@@ -69,7 +69,9 @@ activity-platform对营销活动流程框架和规则引擎提供了详细的设
 
 [03规则引擎设计](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/03规则引擎设计.md)
 
-[04单元测试](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/04单元测试.md)
+[04库表设计](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/04库表设计.md)
+
+[05功能演示](https://github.com/caisl/activity-platform/blob/master/activity-platform-document/src/main/document/05功能演示.md)
 
 
 
