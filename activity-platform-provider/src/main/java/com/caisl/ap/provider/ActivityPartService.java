@@ -5,6 +5,7 @@ import com.caisl.ap.activity.request.NewCustomerPartRequest;
 import com.caisl.ap.activity.response.NewCustomerPartResponse;
 import com.caisl.ap.activity.service.IActivityPartService;
 import com.caisl.ap.core.ActivityDispatcher;
+import com.caisl.ap.core.domain.ActivitySubTypeEnum;
 import com.caisl.ap.core.domain.ActivityTypeEnum;
 import com.caisl.ap.core.domain.ContextParam;
 import com.caisl.ap.core.domain.FunctionCodeEnum;
@@ -25,9 +26,16 @@ public class ActivityPartService implements IActivityPartService {
 
 
     @Override
-    public Result<NewCustomerPartResponse> partNewCustomerActivity(NewCustomerPartRequest request) {
-        ContextParam contextParam = new ContextParam(FunctionCodeEnum.ACTIVITY_PARTICIPATE, request, ActivityTypeEnum
-                .NEW_CUSTOMER_GIFT.getType());
+    public Result<NewCustomerPartResponse> partSub1NewCustomerActivity(NewCustomerPartRequest request) {
+        ContextParam contextParam = new ContextParam(FunctionCodeEnum.ACTIVITY_PARTICIPATE, request,
+                ActivityTypeEnum.NEW_CUSTOMER_GIFT.getType(), ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB1.getType());
+        return activityDispatcher.dispatcher(contextParam);
+    }
+
+    @Override
+    public Result<NewCustomerPartResponse> partSub2NewCustomerActivity(NewCustomerPartRequest request) {
+        ContextParam contextParam = new ContextParam(FunctionCodeEnum.ACTIVITY_PARTICIPATE, request,
+                ActivityTypeEnum.NEW_CUSTOMER_GIFT.getType(), ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB2.getType());
         return activityDispatcher.dispatcher(contextParam);
     }
 }

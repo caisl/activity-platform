@@ -12,11 +12,19 @@ import com.caisl.ap.activity.response.NewCustomerPartResponse;
  */
 public interface IActivityPartService {
     /**
-     * 参与新人有礼活动
+     * 参与新人有礼活动(子类型1)
      *
      * @param request
      * @return
      */
-    Result<NewCustomerPartResponse> partNewCustomerActivity(NewCustomerPartRequest request);
+    Result<NewCustomerPartResponse> partSub1NewCustomerActivity(NewCustomerPartRequest request);
+
+    /**
+     * 参与新人有礼活动(子类型 2)
+     *
+     * @param request
+     * @return
+     */
+    Result<NewCustomerPartResponse> partSub2NewCustomerActivity(NewCustomerPartRequest request);
 
 }

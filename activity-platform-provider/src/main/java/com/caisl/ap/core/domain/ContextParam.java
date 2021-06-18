@@ -15,15 +15,21 @@ public class ContextParam<REQ extends ActivityRequest, DTO extends ActivityDTO> 
     private final FunctionCodeEnum functionCode;
 
     private Integer activityType;
+    private Integer activitySubType;
 
     private REQ request;
 
     private DTO activityDTO;
 
-    public ContextParam(FunctionCodeEnum functionCode, REQ request, Integer activityType) {
+    public ContextParam(FunctionCodeEnum functionCode, REQ request, Integer activityType, Integer activitySubType) {
         this.functionCode = functionCode;
         this.request = request;
         this.activityType = activityType;
+        this.activitySubType = activitySubType;
+    }
+
+    public ContextParam(FunctionCodeEnum functionCode, REQ request, Integer activityType) {
+        this(functionCode, request, activityType, ActivitySubTypeEnum.DEFAULT.getType());
     }
 
     public FunctionCodeEnum getFunctionCode() {
@@ -38,6 +44,13 @@ public class ContextParam<REQ extends ActivityRequest, DTO extends ActivityDTO> 
         this.activityType = activityType;
     }
 
+    public Integer getActivitySubType() {
+        return activitySubType;
+    }
+
+    public void setActivitySubType(Integer activitySubType) {
+        this.activitySubType = activitySubType;
+    }
 
     @Override
     public String toString() {

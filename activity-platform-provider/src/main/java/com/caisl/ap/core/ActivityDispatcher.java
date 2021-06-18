@@ -35,7 +35,7 @@ public class ActivityDispatcher {
         LogUtil.log(ActivityLoggerFactory.BUSINESS, ActivityLoggerMarker.BUSINESS, Level.INFO, "执行" + beanName + "开始" +
                 " " + "context:" + JSON.toJSONString(contextParam));
         try {
-            IActivityHandler activityHandler = factory.getActivityHandler(contextParam.getFunctionCode(), contextParam.getActivityType());
+            IActivityHandler activityHandler = factory.getActivityHandler(contextParam.getFunctionCode(), contextParam.getActivityType(), contextParam.getActivitySubType());
             response = activityHandler.handle(contextParam);
         } catch (BusinessRuntimeException e) {
             LogUtil.log(ActivityLoggerFactory.EXCEPTION_HANDLER, ActivityLoggerMarker.BUSINESS, Level.ERROR,

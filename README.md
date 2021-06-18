@@ -59,6 +59,11 @@ activity-platform对营销活动流程框架和规则引擎提供了详细的设
   1. FunctionCodeEnum定义新的CODE：FunctionCodeEnum.ACTIVITY_RELEASE
   2. 需求分析，功能抽象，由IActivityHandler派生新的子类，定义模板方法
   3. 后续具体活动接入同新活动接入流程，创建并且实现对应的子类
+- 镜像活动接入
+  <br>举例：接入礼包活动，礼包种类包括：新人礼包、节假日礼包等多种子类型
+  1. 新增ActivitySubTypeEnum子活动类型
+  2. 为ContextParam填充activitySubType属性
+  3. 为业务处理类xxxrActivityParser、xxxActivityHandler添加@ActivitySubTypeMapper路由注解(支持多子活动类型，统一多子活动处理流程)
 
 
 

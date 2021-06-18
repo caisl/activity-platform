@@ -8,9 +8,11 @@ import com.caisl.ap.activity.response.NewCustomerPartResponse;
 import com.caisl.ap.activity.response.base.ActivityResponse;
 import com.caisl.ap.common.constants.PresellActivityStatusEnum;
 import com.caisl.ap.common.dataobject.ActivityConfigDO;
+import com.caisl.ap.core.annotation.ActivitySubTypeMapper;
 import com.caisl.ap.core.annotation.ActivityTypeMapper;
 import com.caisl.ap.core.annotation.FunctionMapper;
 import com.caisl.ap.core.base.IActivityResponseParser;
+import com.caisl.ap.core.domain.ActivitySubTypeEnum;
 import com.caisl.ap.core.domain.ActivityTypeEnum;
 import com.caisl.ap.core.domain.ContextParam;
 import com.caisl.ap.core.domain.FunctionCodeEnum;
@@ -18,14 +20,12 @@ import com.caisl.ap.rule.base.Rule;
 import com.caisl.ap.rule.domain.pojo.ActivityStatusRule;
 import com.caisl.ap.rule.domain.pojo.EndTimeRule;
 import com.caisl.ap.rule.domain.pojo.StartTimeRule;
-import com.caisl.ap.system.exception.BusinessRuntimeException;
 import com.caisl.ap.system.logger.ActivityLoggerFactory;
 import com.caisl.ap.system.logger.ActivityLoggerMarker;
 import com.caisl.ap.system.util.LogUtil;
 import com.google.common.collect.Lists;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -35,7 +35,8 @@ import java.util.List;
  * @since 2019-01-12
  */
 @Component
-@ActivityTypeMapper({ActivityTypeEnum.NEW_CUSTOMER_GIFT})
+@ActivityTypeMapper(ActivityTypeEnum.NEW_CUSTOMER_GIFT)
+@ActivitySubTypeMapper({ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB1, ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB2})
 @FunctionMapper({FunctionCodeEnum.ACTIVITY_PARTICIPATE})
 public class NewCustomerActivityParser extends AbstractActivityPartDTOParser<NewCustomerPartRequest> implements IActivityResponseParser<NewCustomerPartRequest, NewCustomerPartDTO> {
 
