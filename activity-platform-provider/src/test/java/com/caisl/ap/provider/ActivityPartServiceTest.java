@@ -1,10 +1,10 @@
 package com.caisl.ap.provider;
 
+import com.caisl.ap.BaseTest;
 import com.caisl.ap.activity.constant.Result;
 import com.caisl.ap.activity.request.NewCustomerPartRequest;
 import com.caisl.ap.activity.response.NewCustomerPartResponse;
 import com.caisl.ap.activity.service.IActivityPartService;
-import com.caisl.ap.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -24,9 +24,17 @@ public class ActivityPartServiceTest extends BaseTest {
     private IActivityPartService activityPartService;
 
     @Test
-    public void partNewCustomerActivity() {
+    public void partSub1NewCustomerActivity() {
         NewCustomerPartRequest request = new NewCustomerPartRequest(customerRegisterId, channelId);
-        Result<NewCustomerPartResponse> result = activityPartService.partNewCustomerActivity(request);
+        Result<NewCustomerPartResponse> result = activityPartService.partSub1NewCustomerActivity(request);
+        Assert.assertTrue(result.isSuccess());
+        Assert.assertNotNull(result.getModel());
+    }
+
+    @Test
+    public void partSub2NewCustomerActivity() {
+        NewCustomerPartRequest request = new NewCustomerPartRequest(customerRegisterId, channelId);
+        Result<NewCustomerPartResponse> result = activityPartService.partSub2NewCustomerActivity(request);
         Assert.assertTrue(result.isSuccess());
         Assert.assertNotNull(result.getModel());
     }

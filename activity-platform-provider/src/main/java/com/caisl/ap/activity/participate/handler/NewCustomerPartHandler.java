@@ -2,8 +2,10 @@ package com.caisl.ap.activity.participate.handler;
 
 
 import ch.qos.logback.classic.Level;
+import com.caisl.ap.core.annotation.ActivitySubTypeMapper;
 import com.caisl.ap.core.annotation.ActivityTypeMapper;
 import com.caisl.ap.core.annotation.FunctionMapper;
+import com.caisl.ap.core.domain.ActivitySubTypeEnum;
 import com.caisl.ap.core.domain.ActivityTypeEnum;
 import com.caisl.ap.core.domain.ContextParam;
 import com.caisl.ap.core.domain.FunctionCodeEnum;
@@ -23,7 +25,8 @@ import javax.annotation.Resource;
  * @since 2019-01-10
  */
 @Component
-@ActivityTypeMapper({ActivityTypeEnum.NEW_CUSTOMER_GIFT})
+@ActivityTypeMapper(ActivityTypeEnum.NEW_CUSTOMER_GIFT)
+@ActivitySubTypeMapper({ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB1, ActivitySubTypeEnum.NEW_CUSTOMER_GIFT_SUB2})
 @FunctionMapper({FunctionCodeEnum.ACTIVITY_PARTICIPATE})
 public class NewCustomerPartHandler extends AbstractActivityPartHandler {
 

@@ -38,7 +38,7 @@ public abstract class AbstractActivityPartHandler implements IActivityHandler {
 
     @Override
     public ActivityResponse handle(ContextParam contextParam) {
-        IActivityDTOParser activityDTOParser = commonFactory.getActivityDTOParser(contextParam.getFunctionCode(), contextParam.getActivityType());
+        IActivityDTOParser activityDTOParser = commonFactory.getActivityDTOParser(contextParam.getFunctionCode(), contextParam.getActivityType(), contextParam.getActivitySubType());
         BaseActivityPartDTO activityDTO = (BaseActivityPartDTO) activityDTOParser.buildDTO(contextParam.getRequest());
         contextParam.setActivityDTO(activityDTO);
         doRuleCheck((BaseActivityPartRequest) contextParam.getRequest(), activityDTO.getRules());
@@ -53,9 +53,7 @@ public abstract class AbstractActivityPartHandler implements IActivityHandler {
      * @return
      */
     private ActivityResponse buildResponse(ContextParam contextParam) {
-        IActivityResponseParser parser = commonFactory.getActivityResponseParser(contextParam.getFunctionCode(),
-                contextParam.getActivityType());
-
+        IActivityResponseParser parser = commonFactory.getActivityResponseParser(contextParam.getFunctionCode(), contextParam.getActivityType(), contextParam.getActivitySubType());
         ActivityResponse activityResponse = parser.buildResponse(contextParam);
         if (activityResponse == null) {
             throw new BusinessRuntimeException("", "");
